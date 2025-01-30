@@ -15,12 +15,12 @@ def IsBool( value ):
         raise ValueError( "Input must be 1, 0, True or False" )
     
 def SaveData( filename, data ):
-    path = f"C:/Users/andre/Desktop/python _projects/{filename}"
+    path = f"./{filename}"
     with open( path, "w" ) as info:
         json.dump( data, info )
 
 def LoadData( filename ):
-    path = f"C:/Users/andre/Desktop/python _projects/{filename}"
+    path = f"./{filename}"
     if os.path.isfile( path ):
         with open( path, "r" ) as info:
             if os.stat( path ).st_size == 0:
