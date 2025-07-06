@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 SEO Website Analyzer Tool
 
