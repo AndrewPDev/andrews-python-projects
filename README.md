@@ -4,10 +4,11 @@ A collection of Python tools and utilities for various purposes.
 
 ## 📋 Overview
 
-This repository contains Python scripts and tools developed for educational and professional use. Currently featuring a hash identification tool for cybersecurity analysis.
+This repository contains Python scripts and tools developed for educational and professional use. Currently featuring a hash identification tool for cybersecurity analysis and a CSV/Excel analyzer for data processing.
 
-## 🛠️ Hash Identifier Tool
+## 🛠️ Tools
 
+### Hash Identifier Tool
 **File:** `hash_tester_main.py`
 
 A powerful hash identification tool that analyzes hash strings and identifies the most likely hash algorithm based on pattern matching and characteristic analysis.
@@ -25,6 +26,33 @@ A powerful hash identification tool that analyzes hash strings and identifies th
 - **Windows Hashes:** NTLM, LM Hash
 - **Application-Specific:** MySQL5, WordPress, Drupal 7, Joomla
 
+### CSV/Excel Analyzer and Cleaner
+**File:** `csv_analyzer.py`
+
+A data analysis and cleaning tool for CSV files that provides insights into your data and helps clean it up for better analysis.
+
+**Features:**
+- Load and analyze CSV files with automatic delimiter detection
+- Column-wise data analysis with type detection
+- Data quality assessment (duplicates, empty rows, inconsistencies)
+- Interactive data cleaning options
+- Export cleaned data to new files
+- Generate detailed analysis reports
+- Support for various CSV formats
+
+**Analysis Capabilities:**
+- **Basic Statistics:** Row/column counts, file size, data types
+- **Column Analysis:** Empty values, unique values, sample data
+- **Data Quality:** Duplicate detection, empty row identification, inconsistent formatting
+- **Type Detection:** Automatic detection of numeric, date, and text columns
+
+**Cleaning Options:**
+- Remove completely empty rows
+- Trim whitespace from all cells
+- Remove special characters
+- Remove duplicate rows
+- Export cleaned data
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -34,7 +62,7 @@ A powerful hash identification tool that analyzes hash strings and identifies th
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/AndrewPDev/andrews-python-projects.git
+   git clone https://github.com/yourusername/andrews-python-projects.git
    cd andrews-python-projects
    ```
 
@@ -43,25 +71,40 @@ A powerful hash identification tool that analyzes hash strings and identifies th
    chmod +x hash_tester_main.py
    ```
 
-### Running the Hash Identifier
+### Running the Tools
 
+#### Hash Identifier:
 ```bash
 python hash_tester_main.py
 ```
 
+#### CSV Analyzer:
+```bash
+python csv_analyzer.py
+```
+
 ## 💡 Usage Examples
 
-### Single Hash Analysis
+### Hash Identifier - Single Hash Analysis
 ```
 Enter hash to identify (or command): 5d41402abc4b2a76b9719d911017c592
 ```
 
-### Batch File Analysis
+### Hash Identifier - Batch File Analysis
 ```
 Enter hash to identify (or command): file:sample_hashes.txt
 ```
 
-### Sample Hash File Format
+### CSV Analyzer - Basic Workflow
+```
+csv-analyzer> load sample_data.csv
+csv-analyzer> analyze
+csv-analyzer> clean
+csv-analyzer> export cleaned_data.csv
+```
+
+### Sample Files
+#### Hash File Format
 Create a text file with one hash per line:
 ```
 # Sample hash file - comments start with #
@@ -70,6 +113,9 @@ aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
 $2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy
 *23AE809DDACAF96AF0FD78ED04B6A265E05AA257
 ```
+
+#### CSV Sample Data
+A sample CSV file (`sample_data.csv`) is included for testing the analyzer.
 
 ## 📊 Output Example
 
@@ -101,30 +147,44 @@ Additional Analysis:
 
 ## 🔧 Commands
 
+### Hash Identifier Commands
 | Command | Description |
 |---------|-------------|
 | `help` | Display usage information |
 | `quit`, `exit`, `q` | Exit the program |
 | `file:filename.txt` | Analyze multiple hashes from file |
 
-## Security Notes
+### CSV Analyzer Commands
+| Command | Description |
+|---------|-------------|
+| `load <filename>` | Load a CSV file for analysis |
+| `analyze` | Analyze the loaded data |
+| `clean` | Clean data with interactive options |
+| `export <filename>` | Export cleaned data to new file |
+| `report` | Generate analysis report |
+| `help` | Display usage information |
+| `quit`, `exit` | Exit the program |
+
+## ⚠️ Security Notes
 
 - **MD5 and SHA-1** are considered cryptographically weak and should not be used for security purposes
 - **bcrypt, scrypt, Argon2** are recommended for password hashing
 - This tool is for **authorized testing only** - ensure proper permissions before use
 - Always verify hash identification results with additional testing
 
-## Project Structure
+## 🏗️ Project Structure
 
 ```
 andrews-python-projects/
 ├── README.md
 ├── hash_tester_main.py      # Hash identifier tool
+├── csv_analyzer.py          # CSV/Excel analyzer and cleaner
+├── sample_data.csv          # Sample CSV file for testing
 └── examples/
     └── sample_hashes.txt    # Example hash file (optional)
 ```
 
-## Contributing
+## 📝 Contributing
 
 Feel free to contribute additional Python tools and utilities! Please:
 - Follow existing code style and commenting patterns
@@ -132,18 +192,18 @@ Feel free to contribute additional Python tools and utilities! Please:
 - Test thoroughly before submission
 - Add examples for new features
 
-## License
+## 📄 License
 
 This software is intended for educational and authorized professional use. Users are responsible for ensuring they have proper authorization before using these tools in professional environments.
 
-## Author
+## 👤 Author
 
 **Andrew Piggot**
 
-## Purpose
+## 🤝 Purpose
 
 Created for educational purposes and authorized penetration testing scenarios.
 
 ---
 
-**DISCLAIMER:** This tool is for educational and authorized testing only. Unauthorized use may violate laws in your jurisdiction. Users assume all responsibility for legal and ethical use.
+**⚠️ DISCLAIMER:** This tool is for educational and authorized testing only. Unauthorized use may violate laws in your jurisdiction. Users assume all responsibility for legal and ethical use.
