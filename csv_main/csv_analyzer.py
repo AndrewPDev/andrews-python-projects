@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 CSV/Excel Analyzer and Cleaner
 
